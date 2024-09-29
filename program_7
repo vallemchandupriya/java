@@ -1,0 +1,36 @@
+public class StringMerger {
+    public static void main(String[] args) {
+        String s1 = "abc";
+        String s2 = "defghi";
+        
+        String mergedString = mergeStrings(s1, s2);
+        System.out.println("Merged String: " + mergedString);
+    }
+
+    public static String mergeStrings(String s1, String s2) {
+        StringBuilder merged = new StringBuilder();  // To store the result
+
+        int i = 0, j = 0;
+     
+        while (i < s1.length() && j < s2.length()) {
+            merged.append(s1.charAt(i)); 
+            merged.append(s2.charAt(j)); 
+            i++;  // Move to the next character in s1
+            j++;  // Move to the next character in s2
+        }
+
+        while (i < s1.length()) {
+            merged.append(s1.charAt(i));
+            i++;
+        }
+
+     
+        while (j < s2.length()) {
+            merged.append(s2.charAt(j));
+            j++;
+        }
+
+     
+        return merged.toString();
+    }
+}
