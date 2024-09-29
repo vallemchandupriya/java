@@ -1,0 +1,39 @@
+class Feb {
+    public static void main(String[] args) {
+        CalPrimeAndFeb c1 = new CalPrimeAndFeb();
+        c1.calfeb();
+    }
+}
+
+class CalPrimeAndFeb {
+
+    boolean calprime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    void calfeb() {
+        int a = 0, b = 1, c;
+        System.out.println("Fibonacci and Prime numbers:");
+        for (int i = 1; i <= 10; i++) { 
+            c = a + b;
+            a = b;
+            b = c;
+           
+            System.out.print(c);
+         
+            if (calprime(c)) {
+                System.out.println(" (Prime)");
+            } else {
+                System.out.println();
+            }
+        }
+    }
+}
