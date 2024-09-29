@@ -1,0 +1,24 @@
+class ThisEx {
+    public static void main(String[] args) {
+        Invoice i1 = new Invoice("siggu", "leydhu", 2, 1.7976931);
+        System.out.println("Invoice Amount: " + i1.getInvoiceAmount());
+    }
+}
+
+public class Invoice {
+    private String partNumber;
+    private String partDescription;
+    private int quantity;
+    private double pricePerItem;
+    
+    public Invoice(String partNumber, String partDescription, int quantity, double pricePerItem) {
+        this.partNumber = partNumber;
+        this.partDescription = partDescription;
+        this.quantity = quantity;
+        this.pricePerItem = pricePerItem;
+    }
+
+    public double getInvoiceAmount() {
+        return quantity * pricePerItem;
+    }
+}
