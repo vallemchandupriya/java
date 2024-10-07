@@ -1,6 +1,6 @@
 class ThisEx {
     public static void main(String[] args) {
-        Invoice i1 = new Invoice("siggu", "leydhu", 2, 1.7976931);
+        Invoice i1 = new Invoice("hello", "hai", 2, 1.7976931);
         System.out.println("Invoice Amount: " + i1.getInvoiceAmount());
     }
 }
